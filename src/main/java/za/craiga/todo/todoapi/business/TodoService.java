@@ -42,7 +42,7 @@ public class TodoService {
         todoRepository.findById(id).ifPresent(todo -> todo.setCompleted(state));
     }
 
-    public void deleteTodosById(List<Long> ids) {
-        todoRepository.deleteAllById(ids);
+    public void archiveTodosByIds(List<Long> ids) {
+        todoRepository.setAllAsArchivedByIds(ids);
     }
 }

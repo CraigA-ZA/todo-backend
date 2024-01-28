@@ -17,4 +17,5 @@ public class Todo {
     private String title;
     private String description;
     private Boolean completed;
+    private Boolean archived;
 }

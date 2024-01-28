@@ -28,9 +28,9 @@ public class TodoController {
         this.todoService.deleteTodo(id);
     }
 
-    @DeleteMapping("/delete")
-    public void deleteTodosById(@RequestParam List<Long> ids) {
-        this.todoService.deleteTodosById(ids);
+    @PostMapping("/archive")
+    public void archiveTodosByIds(@RequestBody List<Long> ids) {
+        this.todoService.archiveTodosByIds(ids);
     }
 
     @PutMapping("/toggle/{id}")
